@@ -12,6 +12,8 @@ cd restAPI
 
 npm install
 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew install httpie
 
 npm run start
@@ -20,3 +22,40 @@ npm run start
 Open a new tab and cd into the restAPI directory
 
 http POST localhost:3000/jobs url=https://www.facebook.com
+
+A successful post should look like:
+
+
+
+HTTP/1.1 200 OK
+
+Connection: keep-alive
+
+Content-Length: 138
+
+Content-Type: application/json; charset=utf-8
+
+Date: Thu, 26 Apr 2018 22:53:14 GMT
+
+ETag: W/"8a-kASUsnR2+KYFWJmJ/kCy/fqreP8"
+
+X-Powered-By: Express
+
+{
+
+    "Created_date": "2018-04-26T22:53:14.206Z",
+    
+    "__v": 0,
+    
+    "_id": "5ae2585ae533d911d94b01b6",
+    
+    "status": [
+    
+        "pending"
+        
+    ],
+    
+    "url": "https://www.facebook.com"
+    
+}
+
