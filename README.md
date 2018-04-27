@@ -10,9 +10,17 @@ git clone https://github.com/hgerard765/restAPI.git
 
 cd restAPI
 
-npm install
-
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install -v node
+
+Install MongoDb:
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/
+
+mongod
+
+npm install
 
 brew install httpie
 
