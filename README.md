@@ -5,12 +5,14 @@ Example:
 
 User submits www.google.com to your endpoint. The user gets back a job id. Your system fetches www.google.com (the result of which would be HTML) and stores the result. The user asks for the status of the job id and if the job is complete, he gets a response that includes the HTML for www.google.com.
 
-# How to run it 
-git clone https://github.com/hgerard765/restAPI.git
+# What to install if needed  
 
-cd restAPI
+
+Homebrew:
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Node.js:
 
 brew install -v node
 
@@ -18,16 +20,24 @@ Install MongoDb:
 
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/
 
-mongod
+Once repo is cloned:
 
 npm install
 
 brew install httpie
 
-npm run start
 
 # Testing
+
+git clone https://github.com/hgerard765/restAPI.git
+
 Open a new tab and cd into the restAPI directory
+
+mongod
+
+Open another new tab and cd into the restAPI directory:
+
+npm run start 
 
 http POST localhost:3000/jobs url=https://www.facebook.com
 
