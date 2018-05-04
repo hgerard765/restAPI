@@ -22,7 +22,7 @@ exports.create_a_job = function(req, res) {
       res.send(err);
     res.json(job);
   });
-  /*new_job.then(function(job){
+  new_job.then(function(job){
     validate_url({ website: job.url }, { website: { url: true } });
     request_promise(job.url);
     .then(function(html){
@@ -30,7 +30,7 @@ exports.create_a_job = function(req, res) {
       job.status = 'completed'
       job.save();
     })
-  })*/
+  })
 };
 
 
